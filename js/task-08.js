@@ -16,6 +16,6 @@ loginEl.addEventListener("submit", (event) => {
       password: passValue,
     };
     console.log(formData);
-    loginEl.rest();
+    loginEl.reset();
   }
 });

@@ -8,11 +8,12 @@ const ingredients = [
 ];
 
 const parEl = document.getElementById("ingredients");
-ingredients.forEach((ingredient) => {
+
+const liItems = ingredients.map((ingredient) => {
   const liEl = document.createElement("li");
   liEl.textContent = ingredient;
   liEl.classList.add("item");
-  parEl.appendChild(liEl);
-
-  // console.log(liEl);
+  return liEl;
 });
+
+parEl.append(...liItems);
